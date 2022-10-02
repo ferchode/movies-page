@@ -1,0 +1,23 @@
+{
+  "name": "movies-page",
+  "version": "1.0.0",
+  "description": "Esta es una aplicacion de peliculas",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferchode/movies-page.git"
+  },
+  "keywords": [
+    "javascript",
+    "api"
+  ],
+  "author": "fernando yepes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ferchode/movies-page/issues"
+  },
+  "homepage": "https://github.com/ferchode/movies-page#readme"
+}
