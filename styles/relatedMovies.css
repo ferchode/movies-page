@@ -1,0 +1,25 @@
+:root{
+
+    --secondary-purple: #565AC5;
+    --background-color:#23273E;
+    --white-smoke: #ECECEC;
+    --dark: #141313; 
+}
+
+.relatedMovies-container{
+
+    display: grid;
+    place-items: center;
+}
+
+.relatedMovies-title{
+
+    color: var(--white-smoke);
+}
+
+.relatedMovies-scrollContainer{
+
+    display: grid;
+    gap: 12px;
+}
+

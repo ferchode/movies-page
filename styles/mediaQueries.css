@@ -1,0 +1,19 @@
+@media (min-width:900px) {
+
+    #searchForm:hover{
+
+        transform: scale(1.1);
+    } 
+
+    .trendingPreview-btn:hover{
+
+        background-color: rgba(236, 236, 236, 0.3);
+        cursor: pointer;
+    }
+
+    .movie-container:hover{
+
+        transform: scale(1.1);
+        overflow:hidden;
+    }
+}

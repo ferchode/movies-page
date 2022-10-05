@@ -1,0 +1,44 @@
+:root{
+
+    --secondary-purple: #565AC5;
+    --background-color:#23273E;
+    --white-smoke: #ECECEC;
+    --dark: #141313; 
+}
+
+#categoriesSection{
+
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(52px,1fr));
+    
+}
+
+.categories-title{
+    
+    display: flex;
+    align-items: center;
+    color: var(--white-smoke);
+
+}
+
+.categories-title h2{
+
+    margin-right: 12px;
+    margin-left: 12px;
+}
+
+.clapperboardCategories{
+
+    font-size: 20px;
+}
+
+.category-container{
+
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    gap: 12px;
+    color: var(--white-smoke);
+}
+

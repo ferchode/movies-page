@@ -6,11 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movies Page</title>
 
-    <link rel="stylesheet" href="./styles/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script src=" https://kit.fontawesome.com/7d8b279fbe.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/trendingPreview.css">
+    <link rel="stylesheet" href="./styles/categoriesSection.css">
+    <link rel="stylesheet" href="./styles/genericList.css">
+    <link rel="stylesheet" href="./styles/movieDetail.css">
+    <link rel="stylesheet" href="./styles/relatedMovies.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" media="(min-width: 900px)" href="./styles/mediaQueries.css" >
+
 </head>
 <body>
-    <h1>Movies Page</h1>
 
+    <header id="header" class="header-container header-container--long">
+
+        <div class="header-title-container">
+            <i class="fa-solid fa-chevron-left inactive" id="header-arrow"></i>
+            <h1 class="header-title">Movies Page</h1>
+            <h1 class="header-title header-title--categoryView inactive">
+              Acción</h1>
+            <i class="fa-solid fa-clapperboard" id="clapperboardHeader"></i>
+
+        </div>
+
+        <div class="form-container">
+        <form id="searchForm" class="header-searchForm">
+            <input type="text" placeholder="Find something!">
+            <button class="searchHeader-button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+      </div>
+    </header>
+
+    <section id="trendingPreview" class="trendingPreview-container">
+
+        <div class="trendingPreview-header">
+                
+                <h2 class="trendingPreview-title">Trending</h2>
+                <button class="trendingPreview-btn">More</button>
+            
+        </div>
+
+        <article class="trendingPreview-movieList">
+            
+          </article>
+    </section>
+
+    <section id="categoriesSection" class="categoriesSection-container">
+        <div class="categories-title">
+            <h2 class="header-title--categoryView">Categories</h2>
+            <i class="fa-solid fa-clapperboard" id="clapperboardCategories"></i>
+        </div>
+
+    </section>
+
+    <section id="genericList" class="genericList-container inactive">
+
+
+    </section>
+    
+    <section id="movieDetail" class="movieDetail-container inactive">
+
+      <div class="description-movie">
+        <img
+            src=""
+            class="selectMovie-img"
+            alt="Nombre de la película"
+          />
+        <h1 class="movieDetail-title">Deadpool</h1>
+        <span class="movieDetail-score">
+          
+        </span>
+        <p class="movieDetail-description">
+          Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.
+        </p>
+
+        <div class="movie-categories">
+
+          <h3 id="" class="category-title"></h3>
+          <h3 id="" class="category-title"></h3>
+          <h3 id="" class="category-title"></h3>
+
+        </div>
+    </div>
+    
+        <article class="relatedMovies-container">
+          <h2 class="relatedMovies-title">Related Movies</h2>
+    
+          <div class="relatedMovies-scrollContainer">
+            <div class="movie-container">
+              <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+              />
+            </div>
+            
+            <div class="movie-container">
+              <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+              />
+            </div>
+            
+            <div class="movie-container">
+              <img
+                src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg"
+                class="movie-img"
+                alt="Nombre de la película"
+              />
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <button class="up-button">
+        <i class="fa-solid fa-chevron-up"></i>
+      </button>
+
+      <footer>
+          <p>Enjoy it! Fercho</p>
+      </footer>
+
+    <script src="./node_modules/axios/dist/axios.min.js"></script>
+    <script src="./src/nodes.js" type="module"></script>
     <script src="./src/main.js" type="module"></script>
+    <script src="./src/navigation.js" type="module"></script>
 </body>
 </html>
