@@ -1,4 +1,3 @@
-import {API_KEY} from "./hidden.js";
 import {headerSection,
     trendingPreviewSection,
     trendingPreview, 
@@ -22,6 +21,8 @@ import {headerSection,
     upButton,
     selectMovieImg,
     movieDetailCategoriesList} from "./nodes.js";
+
+const API_KEY = 'f22109d4b10ca37ba556d1b8b44eaccb';
 
 const api = axios.create({
 
