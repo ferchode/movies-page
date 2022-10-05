@@ -172,6 +172,16 @@ async function getMovieById(id){
     createCategories(movie.genres, movieDetailCategoriesList);
 }
 
+async function getRelatedMoviesById(id){
+
+    const {data} = await api(`movie/${id}/similar`);
+
+    const movie = data.results;
+
+    createMoviesList(movie, relatedMoviesContainer)
+
+}
+
 
 export {getTrendingMoviesPreview, 
         getCategoriesMoviesPreview, 
@@ -179,4 +189,5 @@ export {getTrendingMoviesPreview,
         getMoviesBySearch,
         getTrendingMoviesSection,
         getMovieById,
+        getRelatedMoviesById,
     };

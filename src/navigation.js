@@ -3,7 +3,8 @@ import {getTrendingMoviesPreview,
         getMoviesByCategory,
         getMoviesBySearch,
         getTrendingMoviesSection,
-        getMovieById} from './main.js'
+        getMovieById,
+        getRelatedMoviesById} from './main.js'
 
 import {headerSection,
         trendingPreviewSection,
@@ -150,6 +151,7 @@ function movieDetailsPage(){
     const [_, movieId] = location.hash.split('=');
     
     getMovieById(movieId);
+    getRelatedMoviesById(movieId)
 }
 
 function categoriesPage(){

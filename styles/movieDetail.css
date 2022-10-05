@@ -16,6 +16,7 @@
 .description-movie{
 
     margin-top: 20px;
+    margin-bottom: 20px;
     width: 90%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -52,5 +53,11 @@
     grid-area: 4/1/5/3;
     display: flex;
     flex-wrap: wrap;
+    
+}
+
+.relatedMovies-container{
+    
+    gap: 16px;
     
 }
