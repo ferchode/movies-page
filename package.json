@@ -19,8 +19,5 @@
   "bugs": {
     "url": "https://github.com/ferchode/movies-page/issues"
   },
-  "homepage": "https://github.com/ferchode/movies-page#readme",
-  "dependencies": {
-    "axios": "^0.27.2"
-  }
+  "homepage": "https://github.com/ferchode/movies-page#readme"
 }
