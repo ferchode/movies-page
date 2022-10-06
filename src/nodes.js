@@ -14,6 +14,7 @@ const trendingPreviewMovieList = $('.trendingPreview-movieList');
 const categoriesPreviewList = $('.categoriesSection-container');
 const movieDetailCategoriesList = $('#movieDetail .movie-categories')
 const relatedMoviesContainer = $('.relatedMovies-container');
+const categoriesTitleContainer = $('.categories-title');
 
 //Elements
 const headerTitle = $('.header-title');
@@ -31,30 +32,3 @@ const movieDetailTitle = $('.movieDetail-title');
 const movieDetailDescription = $('.movieDetail-description');
 const movieDetailScore = $('.movieDetail-score');
 const selectMovieImg = $('.selectMovie-img')
-
-export {headerSection,
-        trendingPreviewSection,
-        trendingPreview, 
-        categoriesSection, 
-        genericList, 
-        movieDetail,
-        searchForm,
-        trendingPreviewMovieList,
-        categoriesPreviewList,
-        relatedMoviesContainer,
-        headerTitle,
-        arrowBtn,
-        headerCategoryTitle,
-        searchFormInput,
-        searchFormBtn,
-        trendingBtn,
-        movieDetailTitle,
-        movieDetailDescription,
-        movieDetailScore,
-        clapperboardHeader,
-        upButton,
-        selectMovieImg,
-        movieDetailCategoriesList
-    };
-
-

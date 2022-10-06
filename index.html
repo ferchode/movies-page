@@ -12,13 +12,8 @@
     
     <script src=" https://kit.fontawesome.com/7d8b279fbe.js" crossorigin="anonymous"></script>
     
-    <link rel="stylesheet" href="./styles/header.css">
-    <link rel="stylesheet" href="./styles/trendingPreview.css">
-    <link rel="stylesheet" href="./styles/categoriesSection.css">
-    <link rel="stylesheet" href="./styles/genericList.css">
-    <link rel="stylesheet" href="./styles/movieDetail.css">
-    <link rel="stylesheet" href="./styles/relatedMovies.css">
-    <link rel="stylesheet" href="./styles/footer.css">
+    
+    <link rel="stylesheet" href="./styles/styles.css">
     <link rel="stylesheet" media="(min-width: 900px)" href="./styles/mediaQueries.css" >
 
   
@@ -31,7 +26,7 @@
             <i class="fa-solid fa-chevron-left inactive" id="header-arrow"></i>
             <h1 class="header-title">Movies Page</h1>
             <h1 class="header-title header-title--categoryView inactive">
-              Acción</h1>
+              </h1>
             <i class="fa-solid fa-clapperboard" id="clapperboardHeader"></i>
 
         </div>
@@ -60,11 +55,12 @@
           </article>
     </section>
 
+    <div class="categories-title">
+      <h2 class="header-title--categoryView">Categories</h2>
+        <i class="fa-solid fa-clapperboard" id="clapperboardCategories"></i>
+    </div>
+
     <section id="categoriesSection" class="categoriesSection-container">
-        <div class="categories-title">
-            <h2 class="header-title--categoryView">Categories</h2>
-            <i class="fa-solid fa-clapperboard" id="clapperboardCategories"></i>
-        </div>
 
     </section>
 
@@ -81,12 +77,11 @@
             class="selectMovie-img"
             alt="Nombre de la película"
           />
-        <h1 class="movieDetail-title">Deadpool</h1>
+        <h1 class="movieDetail-title"></h1>
         <span class="movieDetail-score">
           
         </span>
         <p class="movieDetail-description">
-          Wisecracking mercenary Deadpool battles the evil and powerful Cable and other bad guys to save a boy's life.
         </p>
 
         <div class="movie-categories">
@@ -98,8 +93,8 @@
         </div>
     </div>
     
+    <h2 class="relatedMovies-title">Related Movies</h2>
         <article class="relatedMovies-container">
-          <h2 class="relatedMovies-title">Related Movies</h2>
     
         </article>
       </section>
@@ -112,9 +107,9 @@
           <p>Enjoy it! Fercho</p>
       </footer>
 
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./src/nodes.js" type="module"></script>
-    <script src="./src/main.js" type="module"></script>
-    <script src="./src/navigation.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/nodes.js" ></script>
+    <script src="./src/main.js" ></script>
+    <script src="./src/navigation.js" ></script>
 </body>
 </html>

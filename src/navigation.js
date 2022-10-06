@@ -1,35 +1,3 @@
-import {getTrendingMoviesPreview, 
-        getCategoriesMoviesPreview, 
-        getMoviesByCategory,
-        getMoviesBySearch,
-        getTrendingMoviesSection,
-        getMovieById,
-        getRelatedMoviesById} from './main.js'
-
-import {headerSection,
-        trendingPreviewSection,
-        trendingPreview, 
-        categoriesSection, 
-        genericList, 
-        movieDetail,
-        searchForm,
-        trendingPreviewMovieList,
-        categoriesPreviewList,
-        relatedMoviesContainer,
-        headerTitle,
-        arrowBtn,
-        headerCategoryTitle,
-        searchFormInput,
-        searchFormBtn,
-        trendingBtn,
-        movieDetailTitle,
-        movieDetailDescription,
-        movieDetailScore,
-        clapperboardHeader,
-        upButton
-
-    } from "./nodes.js";
-
 searchFormBtn.addEventListener('click', () => {
 
     location.hash = `#search=${searchFormInput.value.trim()}`
@@ -43,7 +11,7 @@ trendingBtn.addEventListener('click', () => {
 
 arrowBtn.addEventListener('click', () => {
 
-    window.history.back()
+    history.back();
 
 });
 
@@ -123,7 +91,7 @@ function searchPage(){
     headerSection.classList.remove('header-container--long');
     arrowBtn.classList.remove('inactive');
     headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.add('inactive');
+    categoriesTitleContainer.classList.add('inactive');
     searchForm.classList.remove('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -140,7 +108,7 @@ function movieDetailsPage(){
     headerSection.classList.add('header-container--long');
     arrowBtn.classList.remove('inactive');
     headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.add('inactive');
+    categoriesTitleContainer.classList.add('inactive');
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -175,4 +143,3 @@ function categoriesPage(){
 
     getMoviesByCategory(categoryId);
 }
-

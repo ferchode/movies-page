@@ -1,27 +1,3 @@
-import {headerSection,
-    trendingPreviewSection,
-    trendingPreview, 
-    categoriesSection, 
-    genericList, 
-    movieDetail,
-    searchForm,
-    trendingPreviewMovieList,
-    categoriesPreviewList,
-    relatedMoviesContainer,
-    headerTitle,
-    arrowBtn,
-    headerCategoryTitle,
-    searchFormInput,
-    searchFormBtn,
-    trendingBtn,
-    movieDetailTitle,
-    movieDetailDescription,
-    movieDetailScore,
-    clapperboardHeader,
-    upButton,
-    selectMovieImg,
-    movieDetailCategoriesList} from "./nodes.js";
-
 const API_KEY = 'f22109d4b10ca37ba556d1b8b44eaccb';
 
 const api = axios.create({
@@ -182,13 +158,3 @@ async function getRelatedMoviesById(id){
     createMoviesList(movie, relatedMoviesContainer)
 
 }
-
-
-export {getTrendingMoviesPreview, 
-        getCategoriesMoviesPreview, 
-        getMoviesByCategory,
-        getMoviesBySearch,
-        getTrendingMoviesSection,
-        getMovieById,
-        getRelatedMoviesById,
-    };
