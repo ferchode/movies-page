@@ -1,19 +1,25 @@
 const API_KEY = 'f22109d4b10ca37ba556d1b8b44eaccb';
+const baseApiUrl = 'https://api.themoviedb.org/3/'
+const base_Images_Url = 'https://image.tmdb.org/t/p/w300';
 
-const api = axios.create({
+async function apiQuery(endpoint, id, query){
 
-    baseURL: 'https://api.themoviedb.org/3/',
-    header:{
+    const res = await fetch(
+        
+        `${baseApiUrl}${endpoint}?api_key=${API_KEY}&${id}&${query}`,{
 
-        'Content-Type': 'application/json;charset=utf-8'
-    },
-    params:{
+        headers: {
 
-        'api_key': API_KEY,
-    }
+            'Content-Type': 'application/json;charset=utf-8',
+        },
+        
 });
 
-const base_Images_Url = 'https://image.tmdb.org/t/p/w300';
+    const data = await res.json();
+    
+    return data;
+
+} 
 
 //Helpers
 function createMoviesList(movies, container){
@@ -63,7 +69,7 @@ function createCategories(categories, container){
 
         categoryContainer.append(icon, categorieTitle);
         container.append(categoryContainer);
-    
+        
     });
 }
 
@@ -71,7 +77,7 @@ function createCategories(categories, container){
 
 async function getTrendingMoviesPreview(){
 
-    const {data} = await api('trending/movie/day')
+    const data = await apiQuery('trending/movie/day')
 
     const movies = data.results;
 
@@ -81,17 +87,18 @@ async function getTrendingMoviesPreview(){
 
 async function getTrendingMoviesSection(){
 
-    const {data} = await api('trending/movie/week')
+    const data = await apiQuery('trending/movie/week')
 
     const movies = data.results;
 
-    createMoviesList(movies, genericList);
+
+        createMoviesList(movies, genericList);
 
 }
 
 async function getCategoriesMoviesPreview(){
 
-    const {data} = await api('genre/movie/list')
+    const data = await apiQuery('genre/movie/list')
 
     const categories = data.genres;
 
@@ -101,57 +108,47 @@ async function getCategoriesMoviesPreview(){
 
 async function getMoviesByCategory(id) {
     
-    const {data} = await api('discover/movie', {
-
-        params: {
-            with_genres: id,
-        },
-    })
+    const data = await apiQuery('discover/movie',`with_genres=${id}`);
 
     const movies = data.results;
-
-    createMoviesList(movies, genericList);
+        
+        createMoviesList(movies, genericList);
 
 }
 
 async function getMoviesBySearch(query) {
-    
-    const {data} = await api('search/movie', {
 
-        params: {
-
-            query,
-        },
-    })
+    const data = await apiQuery('search/movie','',query)
 
     const movies = data.results;
-
-    createMoviesList(movies, genericList);
-    
+        
+        console.log(data) 
+        createMoviesList(movies, genericList);
 }
 
 async function getMovieById(id){
 
-    const {data: movie} = await api(`movie/${id}`)
-
+    const movie = await apiQuery(`movie/${id}`);
+    
     const star = document.createElement('i');
     star.classList.add("fa-regular", "fa-star");
-
+    
     const score = movie.vote_average
-
+    
     movieDetailTitle.textContent = movie.title;
     movieDetailDescription.textContent = movie.overview;
     movieDetailScore.textContent = '';
     movieDetailScore.append(star, score);
     
     selectMovieImg.src = `${base_Images_Url}${movie.poster_path}`;
-
+    
     createCategories(movie.genres, movieDetailCategoriesList);
+
 }
 
 async function getRelatedMoviesById(id){
 
-    const {data} = await api(`movie/${id}/similar`);
+    const data = await apiQuery(`movie/${id}/similar`);
 
     const movie = data.results;
 

@@ -106,8 +106,5 @@ dist
 # hidden.js (API KEY)
 src/hidden.js
 
-#Json
-*.json
-
 #VScode
 *.vscode

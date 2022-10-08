@@ -100,7 +100,9 @@ function searchPage(){
     movieDetail.classList.add('inactive');
 
     const [_, query] = location.hash.split('=');
+
     getMoviesBySearch(query);
+
 }
 
 function movieDetailsPage(){
