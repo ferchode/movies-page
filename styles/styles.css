@@ -38,6 +38,22 @@ h3,p{
     font-size: var(--sm-size);
 }
 
+.skeleton-loading{
+    
+    background-color: #c6c6c6;
+    animation: gradient infinite 1.5s;
+}
+
+@keyframes gradient {
+    
+    0%, 100%{
+        opacity: 100%;
+    }
+    50%{
+        opacity: 0%;
+    }
+}
+
 /*Header section*/
 
 #header{
@@ -190,7 +206,7 @@ h3,p{
 .movie-container{
 
     width: 250px;
-    transition-duration: 0.8s;
+    height: 375px;
 
 }
 

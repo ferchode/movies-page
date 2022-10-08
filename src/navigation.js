@@ -21,6 +21,7 @@ clapperboardHeader.addEventListener('click', () => {
 
 upButton.addEventListener('click', () => window.scrollTo({top:0}));
 
+window.addEventListener('DOMContentLoaded', navigator, false);
 window.addEventListener('load', navigator, false);
 window.addEventListener('hashchange', navigator, false);
 

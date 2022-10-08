@@ -6,7 +6,7 @@ async function apiQuery(endpoint, id, query){
 
     const res = await fetch(
         
-        `${baseApiUrl}${endpoint}?api_key=${API_KEY}&${id}&${query}`,{
+        `${baseApiUrl}${endpoint}?api_key=${API_KEY}&${id}&query=${query}`,{
 
         headers: {
 
@@ -16,7 +16,7 @@ async function apiQuery(endpoint, id, query){
 });
 
     const data = await res.json();
-    
+
     return data;
 
 } 
@@ -155,3 +155,5 @@ async function getRelatedMoviesById(id){
     createMoviesList(movie, relatedMoviesContainer)
 
 }
+
+//Loading Skeleton

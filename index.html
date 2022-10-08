@@ -22,7 +22,7 @@
 
     <header id="header" class="header-container header-container--long">
 
-        <div class="header-title-container">
+        <div class="header-title-container ">
             <i class="fa-solid fa-chevron-left inactive" id="header-arrow"></i>
             <h1 class="header-title">Movies Page</h1>
             <h1 class="header-title header-title--categoryView inactive">
@@ -31,7 +31,7 @@
 
         </div>
 
-        <div class="form-container">
+        <div class="form-container ">
         <form id="searchForm" class="header-searchForm">
             <input type="text" placeholder="Find something!">
             <button class="searchHeader-button">
@@ -43,29 +43,38 @@
 
     <section id="trendingPreview" class="trendingPreview-container">
 
-        <div class="trendingPreview-header">
+        <div class="trendingPreview-header ">
                 
                 <h2 class="trendingPreview-title">Trending</h2>
                 <button class="trendingPreview-btn">More</button>
             
         </div>
 
-        <article class="trendingPreview-movieList">
-            
+        <article class="trendingPreview-movieList ">
+            <div class="movie-container skeleton-loading"></div>
+            <div class="movie-container skeleton-loading"></div>
+            <div class="movie-container skeleton-loading"></div>
           </article>
     </section>
 
-    <div class="categories-title">
+    <div class="categories-title ">
       <h2 class="header-title--categoryView">Categories</h2>
         <i class="fa-solid fa-clapperboard" id="clapperboardCategories"></i>
     </div>
 
-    <section id="categoriesSection" class="categoriesSection-container">
+    <section id="categoriesSection" class="categoriesSection-container ">
+
+      <div class="category-container skeleton-loading"></div>
+      <div class="category-container skeleton-loading"></div>
+      <div class="category-container skeleton-loading"></div>
 
     </section>
 
-    <section id="genericList" class="genericList-container inactive">
+    <section id="genericList" class="genericList-container  inactive">
 
+      <div class="movie-container skeleton-loading"></div>
+      <div class="movie-container skeleton-loading"></div>
+      <div class="movie-container skeleton-loading"></div>
 
     </section>
     
@@ -74,27 +83,27 @@
       <div class="description-movie">
         <img
             src=""
-            class="selectMovie-img"
+            class="selectMovie-img "
             alt="Nombre de la película"
           />
-        <h1 class="movieDetail-title"></h1>
-        <span class="movieDetail-score">
+        <h1 class="movieDetail-title "></h1>
+        <span class="movieDetail-score ">
           
         </span>
-        <p class="movieDetail-description">
+        <p class="movieDetail-description ">
         </p>
 
         <div class="movie-categories">
 
-          <h3 id="" class="category-title"></h3>
-          <h3 id="" class="category-title"></h3>
-          <h3 id="" class="category-title"></h3>
+          <h3 id="" class="category-title "></h3>
+          <h3 id="" class="category-title "></h3>
+          <h3 id="" class="category-title "></h3>
 
         </div>
     </div>
     
     <h2 class="relatedMovies-title">Related Movies</h2>
-        <article class="relatedMovies-container">
+        <article class="relatedMovies-container ">
     
         </article>
       </section>
