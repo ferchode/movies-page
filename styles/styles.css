@@ -54,6 +54,22 @@ h3,p{
     }
 }
 
+.buttons-container{
+
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+    top: 35px;
+    left: 215px;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+}
+
 /*Header section*/
 
 #header{
@@ -73,6 +89,7 @@ h3,p{
     justify-content: center;
     place-items: center;
     gap: 8px;
+    margin-top: 10px;
 }
 
 .header-title{
@@ -163,6 +180,42 @@ h3,p{
     left: 16px;
 }
 
+.lang-icon{
+
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 24px;
+}
+
+.deploy-menu{
+
+    position: absolute;
+    top: 8px;
+    right: 42px;
+    font-size: 20px;
+}
+
+.langs-options--container{
+
+    width: 120px;
+    background-color: var(--white-smoke);
+    display: grid;
+    place-items: center;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 12px;
+    position: absolute;
+    top: 33px;
+    right: 7px;
+    z-index: 2;
+}
+
+.langs-options--container hr{
+
+    width: 80%;
+}
+
 /*Trending Preview Section*/
 
 .trendingPreview-header{
@@ -183,7 +236,7 @@ h3,p{
 
 .trendingPreview-btn{
 
-    width: 65px;
+    width: 45px;
     height: 30px;
     border: 1px solid var(--white-smoke);
     background-color: transparent;
@@ -192,7 +245,8 @@ h3,p{
     
 }
 
-.trendingPreview-movieList{
+.trendingPreview-movieList, 
+.liked-movieList{
 
     display: grid;
     grid-auto-flow: column;
@@ -267,6 +321,7 @@ h3,p{
     justify-content: center;
     gap: 12px;
     padding-top: 16px;
+    margin-bottom: 60px;
 }
 
 /*Movie detail section*/
@@ -280,7 +335,6 @@ h3,p{
 
 .description-movie{
 
-    margin-top: 20px;
     margin-bottom: 20px;
     width: 90%;
     display: grid;
@@ -307,8 +361,6 @@ h3,p{
     grid-area: 3/1/4/3;
 }
 
-
-
 .movie-categories{
     
     width: 100%;
@@ -324,12 +376,20 @@ h3,p{
     
 }
 
+/*Liked movies section*/
+
+.liked-header{
+    
+    padding: 12px;
+}
+
 /*Related movies container*/
 
 .relatedMovies-container{
 
     display: grid;
     place-items: center;
+    margin-bottom: 50px;
 }
 
 .relatedMovies-title{
@@ -341,14 +401,13 @@ h3,p{
 
     display: grid;
     gap: 12px;
+    
 }
 
 /*Footer styles*/
 
 footer{
 
-    position: fixed;
-    bottom: 0;
     background-color: var(--secondary-purple);
     width: 100%;
     height: 40px;
@@ -366,4 +425,27 @@ footer p{
 .inactive{
 
     display: none !important;
+}
+
+/*Errors styles*/
+
+.error-img-msg{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0px 0px 4px 5px rgba(0, 0, 0, 0.25);
+}
+
+.error-img{
+
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 50px;
+}
+
+.error-img-msg p{
+
+    padding: 22px;
 }

@@ -21,6 +21,16 @@
 <body>
 
     <header id="header" class="header-container header-container--long">
+      
+      <i class="fa-solid fa-language lang-icon"></i>
+      <i class="fa-solid fa-chevron-down deploy-menu inactive"></i>
+      <div class="langs-options--container inactive">
+        <option class="lang-option" value="en">English</option>
+        <hr>
+        <option class="lang-option" value="es">Español</option>
+        <hr>
+        <option class="lang-option" value="fr">France</option>
+      </div>
 
         <div class="header-title-container ">
             <i class="fa-solid fa-chevron-left inactive" id="header-arrow"></i>
@@ -28,12 +38,12 @@
             <h1 class="header-title header-title--categoryView inactive">
               </h1>
             <i class="fa-solid fa-clapperboard" id="clapperboardHeader"></i>
-
+            
         </div>
 
         <div class="form-container ">
         <form id="searchForm" class="header-searchForm">
-            <input type="text" placeholder="Find something!">
+            <input type="text" placeholder="Find something!" required>
             <button class="searchHeader-button">
                 <i class="fa-solid fa-magnifying-glass"></i>
             </button>
@@ -45,8 +55,10 @@
 
         <div class="trendingPreview-header ">
                 
-                <h2 class="trendingPreview-title">Trending</h2>
-                <button class="trendingPreview-btn">More</button>
+                <h2 class="trendingPreview-title">Trends</h2>
+                <button class="trendingPreview-btn">
+                  <i class="fa-solid fa-plus"></i>
+                </button>
             
         </div>
 
@@ -57,8 +69,8 @@
           </article>
     </section>
 
-    <div class="categories-title ">
-      <h2 class="header-title--categoryView">Categories</h2>
+    <div class="categories-title">
+      <h2 class="header-title--categoryView" id="categorySectionTitle">Categories</h2>
         <i class="fa-solid fa-clapperboard" id="clapperboardCategories"></i>
     </div>
 
@@ -68,6 +80,29 @@
       <div class="category-container skeleton-loading"></div>
       <div class="category-container skeleton-loading"></div>
 
+    </section>
+
+    <section id="liked" class="liked-container">
+
+      <div class="liked-header">
+        <h2 class="liked-title">Favorites Movies</h2>
+      </div>
+
+      <article class="liked-movieList">
+        <div class="movie-container">
+          <!-- <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" alt="" class="movie-img">
+        </div>
+
+        <div class="movie-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" alt="" class="movie-img">
+        </div>
+
+        <div class="movie-container">
+          <img src="https://image.tmdb.org/t/p/w300/adOzdWS35KAo21r9R4BuFCkLer6.jpg" alt="" class="movie-img">
+        </div> -->
+          
+        </div>
+      </article>
     </section>
 
     <section id="genericList" class="genericList-container  inactive">
